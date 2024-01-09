@@ -1,0 +1,212 @@
+/* container */
+.container {
+    width: 1280px;
+    height: 100vh;
+    margin: 0 auto;
+}
+/* Line */
+.lineT{
+    border-top: 1px solid var(--black100);
+}
+.lineB {
+    border-bottom: 1px solid var(--black100);
+}
+/* none */
+.none {
+    display: none;
+}
+
+/* wrap */
+.wrap {
+    position: relative;
+}
+
+/* header */
+#header {
+    width: 100%;
+    padding-top: 115px;
+    text-align: center;
+    padding-bottom: 45px;
+    margin-bottom: 20px;
+}
+#header h1 {
+    width: 120px;
+    margin: 0 auto 39px;
+    font-size: 3em;
+    color: var(--black600);
+    font-family: 'Rebecca';
+    position: relative;
+    
+}
+#header h1 a {
+    text-decoration: none;
+    transition: all 1s;
+}
+#header h1 a img {
+    width: 115px;
+    position: absolute;
+    top: 15px;
+    opacity: 0;
+    transition: all 1s;
+}
+#header p {
+    font-family: var(--nanumMJ);
+    color: var(--black300);
+}
+#header p em {
+    font-family: var(--nanumMJ);
+    font-size: 0.8em;
+    display: block;
+}
+
+/* main */
+.quiz__header {
+    font-family: var(--nanumSN);
+    font-weight: 700;
+    color: var(--black400);
+}
+.quiz__question {
+    width: 100%;
+    font-family: var(--nanumMJ);
+    color: var(--black400);
+    margin-bottom: 20px;
+}
+.quiz__question2 {
+    width: 100%;
+    max-height: 300px;
+    border: 1px solid var(--black100);
+    font-family: var(--nanumMJ);
+    color: var(--black400);
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 10px 5px;
+    clear: both;
+}
+.quiz__confirm {
+    width: 41px;
+    height: 25px;
+    font-size: 0.8em;
+    font-family: var(--nanumMJ);
+    background-color: var(--black250);
+    border-left: 0;
+    
+    color: var(--white);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    box-sizing: border-box;
+}
+.quiz__confirm:hover {
+    color: var(--white);
+    background-color: var(--black400);
+    border-left: 0;
+}
+/* quiz__confirm .active*/
+.active {
+    font-size: 0.8em;
+    font-family: var(--nanumMJ);
+    background-color: var(--white);
+    border-left: 3px solid var(--black250);
+    color: var(--black400);
+}
+
+.quiz__answer,
+.quiz__desc {
+    font-family: var(--nanumMJ);
+    color: var(--black400);
+}
+.quiz__desc {
+    position: relative;
+}
+.quiz__desc::before {
+    content: '해설';
+    top: -39px;
+    left: 0;
+    width: 45px;
+    height: 25px;
+    font-size: 0.8em;
+    background-color: var(--white);
+    border-left: 3px solid var(--black250);
+    color: var(--black400);
+    position: absolute;
+    text-align: center;
+    padding-top: 0.2em;
+}
+
+.quiz__footer {
+    width: 100%;
+    position: absolute;
+    bottom: 70px;
+}
+.quiz__footer .btn {
+    justify-content: space-between;
+    display: flex;
+}
+.quiz__footer .btn button {
+    width: 100px;
+    height: 25px;
+    background-color: var(--black100);
+    border-radius: 5px;
+    font-family: var(--nanumMJ);
+    color: var(--black500);
+    line-height: 1.5;
+    cursor: pointer;
+}
+.quiz__footer .btn button:hover {
+    background-color: var(--black200);
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 50px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+#footer p {
+    font-family: var(--nanumMJ);
+    font-size: 0.8em;
+    color: var(--black300);
+}
+#footer a {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* 1280px */
+@media(max-width: 1280px){
+    .container {
+        max-width: 96%;
+        word-break: keep-all;
+    }
+}
+
+/* 550px */
+@media(max-width: 550px){
+    #header {
+        padding-top: 45px;
+    }
+    .quiz__question2 {
+        max-height: 200px;
+        text-align: left;
+        align-items: normal;
+    }
+}
+
+/* 400px */
+@media(max-width: 400px){
+    #header {
+        padding-bottom: 25px;
+    }
+    #header > p {
+        display: none;
+    }
+}
